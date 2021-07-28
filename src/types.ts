@@ -11,7 +11,7 @@ export interface ITypedDataField {
     type: string;
 }
 
-export interface IJsonRPCSigner {
+export interface ISigner {
     _signTypedData:
     (
         domain: ITypedDataDomain,

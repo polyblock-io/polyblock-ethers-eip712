@@ -1,5 +1,5 @@
 import { inferTypes } from "./infer-types";
-import { IJsonRPCSigner, ITypedDataDomain, ITypedDataField } from "./types";
+import { ISigner, ITypedDataDomain, ITypedDataField } from "./types";
 
 export class EIP712Message {
 
@@ -17,7 +17,7 @@ export class EIP712Message {
         this.domain = domain || {}
     }
 
-    sign(signer: IJsonRPCSigner) {
+    sign(signer: ISigner) {
         return signer._signTypedData(this.domain, this.types, this.message)
     }
 }
